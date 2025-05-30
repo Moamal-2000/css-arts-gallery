@@ -1,3 +1,4 @@
+import Header from "@/Components/Header/Header";
 import s from "./page.module.scss";
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
             <a href="https://www.linkedin.com/feed">Moamal Alaa</a>
           </p>
         </header>
+        <Header />
       </div>
     </main>
   );

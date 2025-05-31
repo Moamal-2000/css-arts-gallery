@@ -9,14 +9,19 @@ const ArtCard = ({ data }) => {
 
   return (
     <article className={s.artCard}>
-      <div className={s.frame}>
+      <a
+        href={urlData.url}
+        className={s.frame}
+        target="_blank"
+        rel="noreferrer"
+      >
         <Image src={image} alt={title} width={300} height={300} />
-      </div>
+      </a>
 
       <h2 className={s.title}>{title}</h2>
       <p className={s.description}>{description}</p>
 
-      <a href={urlData.url} target="_blank" rel="noreferrer">
+      <a href={urlData.url} className={s.link} target="_blank" rel="noreferrer">
         {isGithubUrl ? <GitHubIcon /> : <CodePenIcon />}
         View on {urlData.type}
       </a>

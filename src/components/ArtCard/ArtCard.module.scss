@@ -19,8 +19,6 @@
   overflow: hidden;
 }
 
-.artCard .frame img {}
-
 .artCard .title {
   font-size: 1.3rem;
   font-weight: 600;
@@ -35,7 +33,7 @@
   margin-bottom: 24px;
 }
 
-.artCard>a {
+.artCard .link {
   border: none;
   display: inline-flex;
   align-items: center;
@@ -60,7 +58,7 @@
   }
 }
 
-.artCard>a>svg {
+.artCard .link>svg {
   width: 16px;
   height: 16px;
 }

@@ -1,3 +1,4 @@
+@use "./mixins" as m;
 @import "./fonts.css";
 
 * {
@@ -16,7 +17,13 @@ body {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 32px;
+}
+
+@include m.small {
+  .container {
+    padding: 16px;
+  }
 }
 
 a {

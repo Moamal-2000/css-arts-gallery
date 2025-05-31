@@ -1,6 +1,22 @@
+@use "@/styles/mixins" as m;
+
 .artsSection {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(357px, 1fr));
   gap: 32px;
   margin-bottom: 32px;
+}
+
+@media (max-width: 830px) {
+  .artsSection {
+    grid-template-columns: 357px;
+    justify-content: center;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 420px) {
+  .artsSection {
+    grid-template-columns: 1fr;
+  }
 }

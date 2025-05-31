@@ -7,5 +7,6 @@ export const CSS_ARTS_DATA = [
       type: "Github",
       url: "",
     },
+    id: 1,
   },
 ];

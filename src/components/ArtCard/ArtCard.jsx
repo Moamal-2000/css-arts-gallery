@@ -4,7 +4,7 @@ import GitHubIcon from "../Svgs/GitHubIcon";
 import s from "./ArtCard.module.scss";
 
 const ArtCard = ({ data }) => {
-  const { title, description, image, urlData } = data;
+  const { title, description, image, urlData, priority } = data;
   const isGithubUrl = urlData.type.toLowerCase() === "github";
 
   return (
@@ -15,7 +15,13 @@ const ArtCard = ({ data }) => {
         target="_blank"
         rel="noreferrer"
       >
-        <Image src={image} alt={title} width={300} height={300} />
+        <Image
+          src={image}
+          alt={title}
+          width={300}
+          height={300}
+          priority={priority}
+        />
       </a>
 
       <h2 className={s.title}>{title}</h2>

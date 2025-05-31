@@ -4,6 +4,7 @@ export const CSS_ARTS_DATA = [
     description:
       "A sleek animated polygon featuring a centered letter, designed as a minimal and elegant loading indicator. Inspired by Brittany Chiang's portfolio (v4), this loader combines clean geometry with smooth animation to create a refined and modern visual element.",
     image: "/css-arts/animated-polygon.png",
+    priority: true,
     urlData: {
       type: "CodePen",
       url: "https://codepen.io/moamal-2000/pen/wvYzPJg",

@@ -21,10 +21,17 @@ const ArtCard = ({ data }) => {
       <h2 className={s.title}>{title}</h2>
       <p className={s.description}>{description}</p>
 
-      <a href={urlData.url} className={s.link} target="_blank" rel="noreferrer">
-        {isGithubUrl ? <GitHubIcon /> : <CodePenIcon />}
-        View on {urlData.type}
-      </a>
+      <div className={s.links}>
+        <a
+          href={urlData.url}
+          className={s.link}
+          target="_blank"
+          rel="noreferrer"
+        >
+          {isGithubUrl ? <GitHubIcon /> : <CodePenIcon />}
+          View on {urlData.type}
+        </a>
+      </div>
     </article>
   );
 };

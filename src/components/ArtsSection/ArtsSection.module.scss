@@ -2,21 +2,18 @@
 
 .artsSection {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(357px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 32px;
   margin-bottom: 32px;
 }
 
-@media (max-width: 830px) {
+@include m.medium {
   .artsSection {
-    grid-template-columns: 357px;
+    width: 100%;
+    max-width: 540px;
+    margin: 0 auto;
+    grid-template-columns: minmax(100%, 540px);
     justify-content: center;
     gap: 16px;
-  }
-}
-
-@media (max-width: 420px) {
-  .artsSection {
-    grid-template-columns: 1fr;
   }
 }

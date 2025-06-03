@@ -4,34 +4,62 @@
   position: relative;
   background: #fff;
   border-radius: 12px;
-  padding: 24px;
   padding-bottom: 24px + 40px; // 24px + link height
   box-shadow: 0 4px 20px rgba(0, 0, 0, .1);
   transition: transform .2s ease;
 }
 
-@include m.very-small {
-  .artCard {
-    padding: 16px;
-    padding-bottom: 16px + 40px;
+.artCard .frame {
+  background: #fafafa;
+  border-radius: 12px 12px 0 0;
+  margin-bottom: 16px;
+  aspect-ratio: 4 / 2.4;
+  @include m.center-x-y;
+  overflow: hidden;
+  clip-path: polygon(100% 0, 100% 84%, 78% 100%, 0 100%, 0 0);
+  filter: brightness(.9);
+  transition:
+    filter .2s ease,
+    outline-offset .2s ease;
+
+  &:hover {
+    filter: brightness(1.05);
+  }
+
+  &:focus-visible {
+    filter: brightness(1.05);
+    outline-offset: -2px;
+    outline: 2px solid rgb(255, 112, 29);
   }
 }
 
-.artCard .frame {
-  background: #fafafa;
-  border: 1px solid #e2e8f0;
-  aspect-ratio: 4 / 3;
-  border-radius: 8px;
-  margin-bottom: 16px;
-  @include m.center-x-y;
-  overflow: hidden;
+@include m.medium {
+  .artCard .frame {
+  aspect-ratio: 4 / 2.6;
+  }
+}
+
+.artCard .content {
+  padding-inline: 24px;
+}
+
+@include m.very-small {
+  .artCard .content {
+    padding-inline: 16px;
+  }
 }
 
 .artCard .title {
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   font-weight: 600;
   margin-bottom: 8px;
   color: #2d3748;
+}
+
+@include m.very-small {
+  .artCard .title {
+    font-size: 1.4rem;
+  }
 }
 
 .artCard .description {
@@ -41,37 +69,67 @@
   margin-bottom: 24px;
 }
 
+@include m.very-small {
+  .artCard .description {
+    margin-bottom: 16px;
+    font-size: .85rem;
+  }
+}
+
 .artCard .links {
   position: absolute;
   bottom: 24px;
+  width: calc(100% - 48px);
 }
 
 .artCard .links .link {
-  border: none;
+  outline: none;
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  color: #1a202c;
+  font-weight: 600;
+  font-size: .9rem;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
-  background: #000;
-  color: #fff;
-  padding: 11px 19px;
-  border-radius: 6px;
-  font-size: .9rem;
-  font-weight: 500;
-  cursor: pointer;
-  outline-offset: 0;
-  transition: background .2s ease, outline-offset .2s ease;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, .2);
+  outline-offset: -3px;
+  transition:
+    border-color .3s ease,
+    box-shadow .3s ease,
+    outline-offset .3s ease;
 
   &:hover {
-    background: #2d3748;
+    border-color: rgba(0, 0, 0, .15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .05);
   }
 
   &:focus-visible {
-    outline: 2px solid #2d3748;
-    outline-offset: 2px;
+    border-color: rgba(0, 0, 0, .15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .05);
+    outline: solid 2px #1a202c;
+    outline-offset: -2px;
   }
 }
 
+.artCard .links .link::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, .8), transparent);
+  translate: -100% 0;
+  transition: translate .6s ease;
+}
+
+.artCard .links .link:where(:hover, :focus-visible)::before {
+  translate: 100% 0;
+}
+
 .artCard .links .link>svg {
-  width: 16px;
-  height: 16px;
+  width: 18px;
+  height: 18px;
 }

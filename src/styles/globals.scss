@@ -9,9 +9,25 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg,
+      #040406 0,
+      #121721 50%,
+      #040406 100%);
+  background-size: 300% 300%;
   min-height: 100vh;
-  color: #333;
+  color: #fff;
+  animation: gradientBG 15s ease infinite;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%,
+      rgba(255, 255, 255, 0.05) 0,
+      transparent 70%);
+  pointer-events: none;
 }
 
 .container {
@@ -35,4 +51,18 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0 50%;
+  }
 }

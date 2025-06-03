@@ -5,7 +5,7 @@
 }
 
 .title {
-  font-size: 3rem;
+  font-size: clamp(2rem, 10vw, 3rem);
   font-weight: 600;
   margin-bottom: 8px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, .3);
@@ -13,6 +13,7 @@
 
 .description {
   font-size: 1.2rem;
+  font-size: clamp(1rem, 4vw, 1.2rem);
   font-weight: 300;
 }
 

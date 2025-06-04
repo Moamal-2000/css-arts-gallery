@@ -19,11 +19,15 @@ const ArtCard = ({ data, index }) => {
         delay: index * 0.05,
       })}
     >
-      <a
+      <motion.a
         href={urlData.url}
         className={s.frame}
         target="_blank"
         rel="noreferrer"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.3, delay: index * 0.05 + 0.1 }}
       >
         <Image
           src={image}
@@ -32,24 +36,46 @@ const ArtCard = ({ data, index }) => {
           height={300}
           priority={priority}
         />
-      </a>
+      </motion.a>
 
-      <div className={s.content}>
-        <h2 className={s.title}>{title}</h2>
-        <p className={s.description}>{description}</p>
+      <motion.div className={s.content}>
+        <motion.h2
+          className={s.title}
+          {...fadeInOnViewMotionProps({
+            visibilityThreshold: 0,
+            initialY: 5,
+            delay: index * 0.05 + 0.3,
+          })}
+        >
+          {title}
+        </motion.h2>
+        <motion.p
+          className={s.description}
+          {...fadeInOnViewMotionProps({
+            visibilityThreshold: 0,
+            initialY: 5,
+            delay: index * 0.05 + 0.4,
+          })}
+        >
+          {description}
+        </motion.p>
 
         <div className={s.links}>
-          <a
+          <motion.a
             href={urlData.url}
             className={s.link}
             target="_blank"
             rel="noreferrer"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4, delay: index * 0.05 + 0.5 }}
           >
             {isGithubUrl ? <GitHubIcon /> : <CodePenIcon />}
             View on {urlData.type}
-          </a>
+          </motion.a>
         </div>
-      </div>
+      </motion.div>
     </motion.article>
   );
 };

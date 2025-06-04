@@ -7,7 +7,7 @@ export function fadeInOnViewMotionProps({
   return {
     initial: { opacity: 0, y: initialY },
     whileInView: { opacity: 1, y: 0 },
-    transition: { duration, delay },
+    transition: { duration, delay, ease: "easeInOut" },
     viewport: { once: true, amount: visibilityThreshold },
   };
 }

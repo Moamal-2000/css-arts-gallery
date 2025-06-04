@@ -4,8 +4,7 @@ import { fadeInOnViewMotionProps } from "@/functions/motionConfig";
 import { motion } from "motion/react";
 import s from "./ArtCardContent.module.scss";
 
-const ArtCardContent = ({ data, index }) => {
-  const { title, description, urlData } = data;
+const ArtCardContent = ({ data: { title, description, urlData }, index }) => {
   const isGithubUrl = urlData.type.toLowerCase() === "github";
 
   return (

@@ -2,9 +2,7 @@ import { motion } from "motion/react";
 import Image from "next/image";
 import s from "./ArtCardFrame.module.scss";
 
-const ArtCardFrame = ({ data, index }) => {
-  const { title, image, urlData, priority } = data;
-
+const ArtCardFrame = ({ data: { title, image, urlData, priority }, index }) => {
   return (
     <motion.a
       href={urlData.url}

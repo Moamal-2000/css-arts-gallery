@@ -41,32 +41,23 @@
   position: absolute;
   bottom: 24px;
   width: calc(100% - 24px * 2); // 100% - .content padding * 2
-  background: rgb(0, 157, 255);
-}
-
-@include m.small {
-  .links {
-    background: rgb(255, 4, 0);
-  }
 }
 
 @include m.very-small {
   .links {
     bottom: 16px;
     width: calc(100% - 16px * 2);
-    background: rgb(255, 119, 0);
   }
 }
 
 .links .link {
   outline: none;
-  width: 100%;
   padding: 14px;
   border-radius: 12px;
   color: #1a202c;
   font-weight: 600;
   font-size: .9rem;
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;

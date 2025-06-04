@@ -38,7 +38,7 @@ const ArtCard = ({ data, index }) => {
         />
       </motion.a>
 
-      <motion.div className={s.content}>
+      <div className={s.content}>
         <motion.h2
           className={s.title}
           {...fadeInOnViewMotionProps({
@@ -75,7 +75,7 @@ const ArtCard = ({ data, index }) => {
             View on {urlData.type}
           </motion.a>
         </div>
-      </motion.div>
+      </div>
     </motion.article>
   );
 };

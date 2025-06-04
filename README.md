@@ -9,18 +9,17 @@ Check it out live here: [https://css-arts-gallery.netlify.app/](https://css-arts
 
 ### These are some of the arts I've made with CSS:
 
-<table>
-  <tr align=center>
-    <td><img src="./public/css-arts/tricky-frame.png" width="640"/></td>
-    <td><img src="./public/css-arts/uno-cards.png" width="640"/></td>
-  </tr>
-  <tr align=center>
-    <td><img src="./public/css-arts/desktop.png" width="640"/></td>
-    <td><img src="./public/css-arts/space-cat.png" width="640"/></td>
-  </tr>
-  <tr align=center>
-    <td><img src="./public/css-arts/audio-cassette.png" width="640"/></td>
-    <td><img src="./public/css-arts/camera.png" width="640"/></td>
-  </tr>
-  <tr>
-</table>
+<div>
+  <img src="./public/css-arts/tricky-frame.png" width="360"/>
+  <img src="./public/css-arts/uno-cards.png" width="360"/>
+</div>
+
+<div>
+  <img src="./public/css-arts/desktop.png" width="360"/>
+  <img src="./public/css-arts/space-cat.png" width="360"/>
+</div>
+
+<div>
+  <img src="./public/css-arts/audio-cassette.png" width="360"/>
+  <img src="./public/css-arts/camera.png" width="360"/>
+</div>

@@ -1,14 +1,24 @@
+"use client";
+
+import { fadeInOnViewMotionProps } from "@/functions/motionConfig";
+import { motion } from "motion/react";
 import Image from "next/image";
 import CodePenIcon from "../Svgs/CodePenIcon";
 import GitHubIcon from "../Svgs/GitHubIcon";
 import s from "./ArtCard.module.scss";
 
-const ArtCard = ({ data }) => {
+const ArtCard = ({ data, index }) => {
   const { title, description, image, urlData, priority } = data;
   const isGithubUrl = urlData.type.toLowerCase() === "github";
 
   return (
-    <article className={s.artCard}>
+    <motion.article
+      className={s.artCard}
+      {...fadeInOnViewMotionProps({
+        visibilityThreshold: 0,
+        delay: index * 0.05,
+      })}
+    >
       <a
         href={urlData.url}
         className={s.frame}
@@ -40,7 +50,7 @@ const ArtCard = ({ data }) => {
           </a>
         </div>
       </div>
-    </article>
+    </motion.article>
   );
 };
 

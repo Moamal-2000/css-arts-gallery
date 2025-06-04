@@ -5,8 +5,8 @@ import s from "./ArtsSection.module.scss";
 const ArtsSection = () => {
   return (
     <section className={s.artsSection}>
-      {CSS_ARTS_DATA.map((art) => (
-        <ArtCard key={art.id} data={art} />
+      {CSS_ARTS_DATA.map((art, index) => (
+        <ArtCard key={art.id} data={art} index={index} />
       ))}
     </section>
   );

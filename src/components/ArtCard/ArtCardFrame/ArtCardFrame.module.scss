@@ -1,0 +1,31 @@
+@use "@/styles/mixins" as m;
+
+.frame {
+  background: #fafafa;
+  border-radius: 12px 12px 0 0;
+  margin-bottom: 16px;
+  aspect-ratio: 4 / 2.4;
+  @include m.center-x-y;
+  overflow: hidden;
+  clip-path: polygon(100% 0, 100% 84%, 78% 100%, 0 100%, 0 0);
+  filter: brightness(.9);
+  transition:
+    filter .2s ease,
+    outline-offset .2s ease;
+
+  &:hover {
+    filter: brightness(1.05);
+  }
+
+  &:focus-visible {
+    filter: brightness(1.05);
+    outline-offset: -2px;
+    outline: 2px solid rgb(255, 112, 29);
+  }
+}
+
+@include m.medium {
+  .frame {
+    aspect-ratio: 4 / 2.6;
+  }
+}

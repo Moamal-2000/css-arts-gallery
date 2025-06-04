@@ -10,17 +10,17 @@ Check it out live here: [https://css-arts-gallery.netlify.app/](https://css-arts
 ### These are some of the arts I've made with CSS:
 
 <table>
-  <tr>
-    <td><img src="./public/css-arts/tricky-frame.png" width="300" alt="Art 4"/></td>
-    <td><img src="./public/css-arts/uno-cards.png" width="300" alt="Art 4"/></td>
+  <tr align=center>
+    <td><img src="./public/css-arts/tricky-frame.png" width="640"/></td>
+    <td><img src="./public/css-arts/uno-cards.png" width="640"/></td>
   </tr>
-  <tr>
-    <td><img src="./public/css-arts/desktop.png" width="300" alt="Art 3"/></td>
-    <td><img src="./public/css-arts/space-cat.png" width="300" alt="Art 4"/></td>
+  <tr align=center>
+    <td><img src="./public/css-arts/desktop.png" width="640"/></td>
+    <td><img src="./public/css-arts/space-cat.png" width="640"/></td>
   </tr>
-  <tr>
-    <td><img src="./public/css-arts/audio-cassette.png" width="300" alt="Art 1"/></td>
-    <td><img src="./public/css-arts/camera.png" width="300" alt="Art 2"/></td>
+  <tr align=center>
+    <td><img src="./public/css-arts/audio-cassette.png" width="640"/></td>
+    <td><img src="./public/css-arts/camera.png" width="640"/></td>
   </tr>
   <tr>
 </table>

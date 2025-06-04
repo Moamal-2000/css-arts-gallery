@@ -10,16 +10,16 @@ Check it out live here: [https://css-arts-gallery.netlify.app/](https://css-arts
 ### These are some of the arts I've made with CSS:
 
 <div>
-  <img src="./public/css-arts/tricky-frame.png" width="360"/>
-  <img src="./public/css-arts/uno-cards.png" width="360"/>
+  <img src="./public/css-arts/tricky-frame.png" width="460"/>
+  <img src="./public/css-arts/uno-cards.png" width="460"/>
 </div>
 
 <div>
-  <img src="./public/css-arts/desktop.png" width="360"/>
-  <img src="./public/css-arts/space-cat.png" width="360"/>
+  <img src="./public/css-arts/desktop.png" width="460"/>
+  <img src="./public/css-arts/space-cat.png" width="460"/>
 </div>
 
 <div>
-  <img src="./public/css-arts/audio-cassette.png" width="360"/>
-  <img src="./public/css-arts/camera.png" width="360"/>
+  <img src="./public/css-arts/audio-cassette.png" width="460"/>
+  <img src="./public/css-arts/camera.png" width="460"/>
 </div>

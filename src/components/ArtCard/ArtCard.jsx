@@ -36,6 +36,7 @@ const ArtCard = ({ data, index }) => {
         />
       </motion.a>
 
+      <ArtCardFrame />
       <ArtCardContent data={data} />
     </motion.article>
   );

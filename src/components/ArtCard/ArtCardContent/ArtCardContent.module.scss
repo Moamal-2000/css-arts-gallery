@@ -1,0 +1,96 @@
+@use "@/styles/mixins" as m;
+
+.content {
+  padding-inline: 24px;
+}
+
+@include m.very-small {
+  .content {
+    padding-inline: 16px;
+  }
+}
+
+.title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #2d3748;
+}
+
+@include m.very-small {
+  .title {
+    font-size: 1.4rem;
+  }
+}
+
+.description {
+  color: #718096;
+  font-size: .9rem;
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+@include m.very-small {
+  .description {
+    margin-bottom: 16px;
+    font-size: .85rem;
+  }
+}
+
+.links {
+  position: absolute;
+  bottom: 24px;
+  width: calc(100% - 48px);
+}
+
+.links .link {
+  outline: none;
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  color: #1a202c;
+  font-weight: 600;
+  font-size: .9rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, .2);
+  outline-offset: -3px;
+  transition:
+    border-color .3s ease,
+    box-shadow .3s ease,
+    outline-offset .3s ease;
+
+  &:hover {
+    border-color: rgba(0, 0, 0, .15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .05);
+  }
+
+  &:focus-visible {
+    border-color: rgba(0, 0, 0, .15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .05);
+    outline: solid 2px #1a202c;
+    outline-offset: -2px;
+  }
+}
+
+.links .link::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, .8), transparent);
+  translate: -100% 0;
+  transition: translate .6s ease;
+}
+
+.links .link:where(:hover, :focus-visible)::before {
+  translate: 100% 0;
+}
+
+.links .link>svg {
+  width: 18px;
+  height: 18px;
+}

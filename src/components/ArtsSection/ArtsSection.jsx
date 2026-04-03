@@ -1,5 +1,5 @@
 import { CSS_ARTS_DATA } from "@/data/cssArtsData";
-import ArtCard from "../ArtCard/ArtCard";
+import ArtCard from "./ArtCard/ArtCard";
 import s from "./ArtsSection.module.scss";
 
 const ArtsSection = () => {

@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import Image from "next/image";
 import s from "./ArtCardFrame.module.scss";
 
-const ArtCardFrame = ({ data: { title, image, urlData, priority }, index }) => {
+const ArtCardFrame = ({ data: { title, image, urlData }, index }) => {
   return (
     <motion.a
       href={urlData.url}
@@ -19,7 +19,9 @@ const ArtCardFrame = ({ data: { title, image, urlData, priority }, index }) => {
         alt={title}
         width={455}
         height={273}
-        priority={priority}
+        priority={index < 2}
+        fetchPriority={index < 2 ? "high" : "low"}
+        loading={index < 2 ? "eager" : "lazy"}
       />
     </motion.a>
   );
